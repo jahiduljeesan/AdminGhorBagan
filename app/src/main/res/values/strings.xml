@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Admin Ghor Bagan</string>
+    <string-array name="category_items">
+        <item>fruit</item>
+        <item>flower</item>
+        <item>vegetable</item>
+        <item>other</item>
+        <item>room</item>
+        <item>balcony</item>
+    </string-array>
+</resources>

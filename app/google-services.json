@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "568980402470",
+    "project_id": "admin-ghor-bagan",
+    "storage_bucket": "admin-ghor-bagan.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:568980402470:android:441df0edcad42c9eb991e7",
+        "android_client_info": {
+          "package_name": "com.example.adminghorbagan"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDkUE-bV5cPdKNLaSRkA4OI_hbl7N5tEV4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
