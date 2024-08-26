@@ -1,18 +1,27 @@
 package com.example.adminghorbagan.Data;
 
 public class ItemsModel {
-    String title,intro,description,process,imageUrl,category;
+    String title,intro,description,process,imageUrl,category,tag;
 
     public ItemsModel() {
     }
 
-    public ItemsModel(String title, String intro, String description, String process, String imageUrl, String category) {
+    public ItemsModel(String title, String intro, String description, String process, String imageUrl, String category,String tag) {
         this.title = title;
         this.intro = intro;
         this.description = description;
         this.process = process;
         this.imageUrl = imageUrl;
         this.category = category;
+        this.tag = tag;
+    }
+
+    public String getTag() {
+        return tag;
+    }
+
+    public void setTag(String tag) {
+        this.tag = tag;
     }
 
     public String getCategory() {

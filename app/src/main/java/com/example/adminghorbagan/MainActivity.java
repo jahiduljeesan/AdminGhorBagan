@@ -41,7 +41,7 @@ import java.util.Locale;
 public class MainActivity extends AppCompatActivity {
 
     ActivityMainBinding actMain;
-    String title = "",intro= "",description= "",process= "",category = "";
+    String title = "",intro= "",description= "",process= "",category = "",tag = "";
     Intent intent;
     Uri imageUri;
     StorageReference storageReference;
@@ -88,8 +88,9 @@ public class MainActivity extends AppCompatActivity {
         description = actMain.etItemDescription.getText().toString();
         process = actMain.etItemProcess.getText().toString();
         category = actMain.spinnerCatergory.getSelectedItem().toString();
+        tag = actMain.etItemTag.getTag().toString();
 
-        if(title.isEmpty() || intro.isEmpty() || description.isEmpty() || process.isEmpty() || category.isEmpty()){
+        if(title.isEmpty() || intro.isEmpty() || description.isEmpty() || process.isEmpty() || category.isEmpty() || tag.isEmpty()){
             Toast.makeText(this, "Add all data properly", Toast.LENGTH_SHORT).show();
             return true;
         }
@@ -158,10 +159,12 @@ public class MainActivity extends AppCompatActivity {
         }
         return progressDialog;
     }
+
+
     private void addData(String imageUrl) {
         databaseReference = FirebaseDatabase.getInstance().getReference("ItemData");
         String id = databaseReference.push().getKey();
-        ItemsModel itemsModel = new ItemsModel(title,intro,description,process,imageUrl,category);
+        ItemsModel itemsModel = new ItemsModel(title,intro,description,process,imageUrl,category,tag);
         databaseReference.child(id)
                 .setValue(itemsModel)
                 .addOnCompleteListener(new OnCompleteListener<Void>() {

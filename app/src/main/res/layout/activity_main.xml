@@ -125,6 +125,25 @@
 
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/etItemTagLayout"
+            style="@style/ThemeOverlay.Material3.TextInputEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="#D7D3D3"
+            android:hint="Enter item tag"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etItemProcessLayout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etItemTag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
         <TextView
             android:id="@+id/tvCategory"
             android:layout_width="wrap_content"
@@ -134,7 +153,8 @@
             android:text="Select Category : "
             android:textSize="25dp"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/etItemProcessLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/etItemTagLayout" />
+
 
         <Spinner
             android:id="@+id/spinnerCatergory"
@@ -145,7 +165,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toEndOf="@+id/tvCategory"
-            app:layout_constraintTop_toBottomOf="@+id/etItemProcessLayout" />
+            app:layout_constraintTop_toBottomOf="@+id/etItemTagLayout" />
 
         <Button
             android:id="@+id/btnSubmit"
